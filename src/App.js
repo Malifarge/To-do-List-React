@@ -28,6 +28,14 @@ class App extends React.Component {
     })
   }
 
+  modifyTask = (i) => {
+    let taskEdit = [...this.state.tasks]
+
+    this.setState({
+      tasks: taskEdited
+    })
+  }
+
 
   render() {
     return(
@@ -42,6 +50,7 @@ class App extends React.Component {
           <List
             deleteTask={this.deleteTask}
             tasks={this.state.tasks}
+            modifyTask={this.modifyTask}
           />
         </div>
       </div>
