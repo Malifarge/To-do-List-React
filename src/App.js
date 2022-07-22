@@ -40,9 +40,10 @@ class App extends React.Component {
     }
 
 
-  modifyTask = (i) => {
+  modifyTask = (i, description, status) => {
     let taskEdit = [...this.state.tasks]
-
+    taskEdit[i].description = description
+    taskEdit[i].status = status
     this.setState({
       tasks: taskEdit
     })
