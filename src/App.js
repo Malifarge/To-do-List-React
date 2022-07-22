@@ -40,6 +40,7 @@ class App extends React.Component {
         <div>
           <List
             deleteTask={this.deleteTask}
+            tasks={this.state.tasks}
           />
         </div>
       </div>

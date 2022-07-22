@@ -2,15 +2,17 @@ import React from "react";
 
 class List extends React.Component{
    render() {
-    console.log(this.props.tasks);
+    console.log(this.props);
+    return(
     this.props.tasks.map((task)=>{
         return(
-        <li>
-        <p>{task}</p>
-        <button onClick={() => deleteTask(i)}>Delete</button>
-        </li>
-        )
-    })
+        <li key={this.props.tasks.indexOf(task)} className="flex-1">
+        <p>{task.description}</p>
+        <p>{task.status}</p>
+        <button onClick={() => this.props.deleteTask(this.props.tasks.indexOf(task))}>Delete</button>
+        </li>)
+        })
+    )
    }
 }
 
