@@ -1,6 +1,7 @@
 import React from 'react'
 import Form from './compnents/Form'
 import List from './compnents/List'
+import './index.css'
 
 class App extends React.Component {
   constructor () {
