@@ -32,7 +32,7 @@ class App extends React.Component {
     let taskEdit = [...this.state.tasks]
 
     this.setState({
-      tasks: taskEdited
+      tasks: taskEdit
     })
   }
 
