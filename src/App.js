@@ -11,13 +11,12 @@ class App extends React.Component {
     }
   }
 
-  addTask(str) {
+  addTask = (str) => {
     
-    let newTasks = [...this.state.tasks, {description: str, status: "To do"}]
+    let newTasks = [{description: str, status: "To do"}, ...this.state.tasks]
     this.setState({
       tasks: newTasks
     })
-    console.log(str)
   }
 
 
