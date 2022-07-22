@@ -38,7 +38,7 @@ class App extends React.Component {
             addTask={this.addTask}
           />
         </div>
-        <div>
+        <div className='shadow-md'>
           <List
             deleteTask={this.deleteTask}
             tasks={this.state.tasks}

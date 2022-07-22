@@ -29,7 +29,7 @@ class Form extends React.Component{
         return (
             <form onSubmit={this.handleSubmit} className="flex gap-3">
                 <input type="text" className="shadow-md border border-solid border-stone-800" onChange={this.handleTaskDescriptionChange} value={this.state.task}/>
-                <button type="submit">Add Task</button>
+                <button type="submit" className="border border solid border-black p-1 rounded-lg">Add Task</button>
             </form>
             
         );
