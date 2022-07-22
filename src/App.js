@@ -12,10 +12,10 @@ class App extends React.Component {
   }
 
   addTask(str) {
+    
+    let newTasks = [...this.state.tasks, {description: str, status: "To do"}]
     this.setState({
-      tasks: [{
-        description: str, 
-        status: "To do"}, ...this.state.tasks]
+      tasks: newTasks
     })
     console.log(str)
   }
@@ -27,7 +27,7 @@ class App extends React.Component {
         <h1 className="text-3xl font-bold underline">ToDo List</h1>
         <div>
           <Form
-            addTask={this.state.addTask}
+            addTask={this.addTask}
           />
         </div>
       </div>

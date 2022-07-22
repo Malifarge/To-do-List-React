@@ -13,12 +13,12 @@ class Form extends React.Component{
 
       handleTaskDescriptionChange = e =>{
         this.setState({
-            task: e.value
+            task: e.target.value
         })
       }
 
       handleSubmit = e =>{
-        e.preventdefault()
+        e.preventDefault()
         this.props.addTask (this.state.task)
         this.setState({
             task: ""

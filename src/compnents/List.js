@@ -1,7 +1,9 @@
-import React from "react";
+// import React from "react";
 
-class List extends React.Component{
-   
-}
+// class List extends React.Component{
+//    render() {
+//     console.log(this.props.tasks);
+//    }
+// }
 
-export default List
+// export default List
