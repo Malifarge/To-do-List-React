@@ -2,12 +2,35 @@ import React from "react";
 
 class Form extends React.Component{
 
+    constructor () {
+        super ()
+    
+        this.state = {
+            task: ""
+        }
+      
+      }
+
+      handleTaskDescriptionChange = e =>{
+        this.setState({
+            task: e.value
+        })
+      }
+
+      handleSubmit = e =>{
+        e.preventdefault()
+        this.props.addTask (this.state.task)
+        this.setState({
+            task: ""
+        })
+      }
+
     render() {
         return (
-            <article>
-                <input type="text" />
+            <form onSubmit={this.handleSubmit}>
+                <input type="text" onChange={this.handleTaskDescriptionChange} value={this.state.task}/>
                 <button type="submit">Add Task</button>
-            </article>
+            </form>
             
         );
     }
