@@ -9,6 +9,7 @@ class List extends React.Component{
         <p>{task.description}</p>
         <p>{task.status}</p>
         <button onClick={() => this.props.deleteTask(this.props.tasks.indexOf(task))}>Delete</button>
+        <button onClick={() => this.props.modifyTask(this.props.tasks.indexOf(task))}>Edit</button>
         </li>)
         })
     )

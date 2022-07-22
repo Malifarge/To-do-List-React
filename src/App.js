@@ -37,6 +37,15 @@ class App extends React.Component {
     this.setState({
       Tab:filtre
     })
+    }
+
+
+  modifyTask = (i) => {
+    let taskEdit = [...this.state.tasks]
+
+    this.setState({
+      tasks: taskEdit
+    })
   }
 
 
@@ -62,21 +71,25 @@ class App extends React.Component {
           {this.state.Tab==="All" && <List
             deleteTask={this.deleteTask}
             tasks={this.state.tasks}
+            modifyTask={this.modifyTask}
           />}
 
           {this.state.Tab==="To do" && <List
             deleteTask={this.deleteTask}
             tasks={this.state.Todo}
+            modifyTask={this.modifyTask}
           />}
 
           {this.state.Tab==="Doing" && <List
             deleteTask={this.deleteTask}
             tasks={this.state.Doing}
+            modifyTask={this.modifyTask}
           />}
 
           {this.state.Tab==="Done" && <List
             deleteTask={this.deleteTask}
             tasks={this.state.Done}
+            modifyTask={this.modifyTask}
           />}
         </div>
       </div>
