@@ -19,6 +19,14 @@ class App extends React.Component {
     })
   }
 
+  deleteTask = (i) => {
+    let taskDeleted = [...this.state.tasks]
+    taskDeleted.splice(i, 1)
+    this.setState({
+      tasks: taskDeleted
+    })
+  }
+
 
   render() {
     return(
@@ -27,6 +35,11 @@ class App extends React.Component {
         <div>
           <Form
             addTask={this.addTask}
+          />
+        </div>
+        <div>
+          <List
+            deleteTask={this.deleteTask}
           />
         </div>
       </div>
