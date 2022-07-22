@@ -4,11 +4,13 @@ import Form from './compnents/Form'
 class App extends React.Component {
   constructor () {
     super ()
+
+    this.state = {
+    tasks: []
+  }
   }
 
-  // this.state = {
-  //   tasks: []
-  // }
+  
 
 
 
