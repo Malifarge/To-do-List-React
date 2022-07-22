@@ -9,13 +9,17 @@ class App extends React.Component {
   // this.state = {
   //   tasks: []
   // }
+
+
+
+  render() {
+    return(
+      <p>hello</p>
+    )
+  }
 }
 
-render() {
-  return(
-    <p>hello</p>
-  )
-}
+
 
 
 export default App;
