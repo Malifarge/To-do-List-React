@@ -1,5 +1,6 @@
 import React from 'react'
 import Form from './compnents/Form'
+import List from './compnents/List'
 
 class App extends React.Component {
   constructor () {
@@ -13,13 +14,13 @@ class App extends React.Component {
   addTask(str) {
     this.setState({
       tasks: [{
-        description: "Description de ma tache", 
+        description: str, 
         status: "To do",
+        ...this.state.tasks
       }]
     })
-    console.log(str)
+    // console.log(this.state.tasks)
   }
-
 
 
   render() {
