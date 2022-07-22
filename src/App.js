@@ -39,9 +39,9 @@ class App extends React.Component {
 
   render() {
     return(
-      <div className='container'>
+      <div className='container p-6'>
         <h1 className="text-3xl font-bold underline">ToDo List</h1>
-        <div>
+        <div className='my-5'> 
           <Form
             addTask={this.addTask}
           />
