@@ -27,8 +27,8 @@ class Form extends React.Component{
 
     render() {
         return (
-            <form onSubmit={this.handleSubmit} >
-                <input type="text" className="shadow-md" onChange={this.handleTaskDescriptionChange} value={this.state.task}/>
+            <form onSubmit={this.handleSubmit} className="flex gap-3">
+                <input type="text" className="shadow-md border border-solid border-stone-800" onChange={this.handleTaskDescriptionChange} value={this.state.task}/>
                 <button type="submit">Add Task</button>
             </form>
             
