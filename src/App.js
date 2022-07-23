@@ -16,7 +16,7 @@ class App extends React.Component {
     }
   }
 
-  addTask = (str) => {
+  addTask = str => {
     
     let newTasks = [{description: str, status: "To do"}, ...this.state.tasks]
     this.setState({
@@ -25,7 +25,7 @@ class App extends React.Component {
     
   }
 
-  deleteTask = (i) => {
+  deleteTask = i => {
     let taskDeleted = [...this.state.tasks]
     taskDeleted.splice(i, 1)
     this.setState({
@@ -33,7 +33,7 @@ class App extends React.Component {
     })
   }
 
-  handleClickFilter = (filtre) =>{
+  handleClickFilter = filtre =>{
     this.setState({
       Tab:filtre
     })
@@ -47,12 +47,13 @@ class App extends React.Component {
     this.setState({
       tasks: taskEdit
     })
-  }
+  } 
 
 
   render() {
+    console.log(modifyTask)
     return(
-      <div className='container p-6'>
+      <div className='container mx-auto p-6'>
         <h1 className="text-3xl font-bold underline">ToDo List</h1>
 
         <div className='my-5'> 
@@ -62,10 +63,10 @@ class App extends React.Component {
         </div>
 
         <div className='flex gap-5'>
-        <button className='border border solid border-black p-1 rounded-lg w-24' onClick={() => this.handleClickFilter("All")}>All</button>
-        <button className='border border solid border-black p-1 rounded-lg w-24' onClick={() => this.handleClickFilter("To do")}>To do</button>
-        <button className='border border solid border-black p-1 rounded-lg w-24' onClick={() => this.handleClickFilter("Doing")}>Doing</button>
-        <button className='border border solid border-black p-1 rounded-lg w-24' onClick={() => this.handleClickFilter("Done")}>Done</button>
+        <button className='border-2 solid transition-colors border-violet-400 text-violet-500 hover:bg-violet-300 hover:text-white p-1 rounded-lg w-24' onClick={() => this.handleClickFilter("All")}>All</button>
+        <button className='border-2 solid transition-colors border-orange-300 text-orange-400 hover:bg-orange-200 hover:text-orange-500 p-1 rounded-lg w-24' onClick={() => this.handleClickFilter("To do")}>To do</button>
+        <button className='border-2 solid transition-colors border-yellow-300 text-yellow-400 hover:bg-yellow-100 hover:text-yellow-400 p-1 rounded-lg w-24' onClick={() => this.handleClickFilter("Doing")}>Doing</button>
+        <button className='border-2 solid transition-colors border-green-300 text-green-400 hover:bg-green-100 hover:text-green-500 p-1 rounded-lg w-24' onClick={() => this.handleClickFilter("Done")}>Done</button>
         </div>
 
         <div className='shadow-md'>
